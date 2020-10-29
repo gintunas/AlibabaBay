@@ -1,5 +1,5 @@
-package tracking;
+package tracking
 
-public interface Tracked {
-    String getLocation();
+interface Tracked {
+    val location: String?
 }

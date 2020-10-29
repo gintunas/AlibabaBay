@@ -1,13 +1,16 @@
-package invoicing;
+package invoicing
 
-import items.Item;
+import items.Item
 
-public class InvoiceImpl implements Invoiced {
-
-    @Override
-    public void printInvoice(Item item) {
-        System.out.println("\n-------------------------Invoice-------------------------\n" +
-                "Item: " + item.name + "\nPrice: " + item.price +
-                "\n---------------------------------------------------------\n");
+class InvoiceImpl : Invoiced {
+    override fun printInvoice(item: Item) {
+        println("""
+    
+    -------------------------Invoice-------------------------
+    Item: ${item.name}
+    Price: ${item.price}
+    ---------------------------------------------------------
+    
+    """.trimIndent())
     }
 }

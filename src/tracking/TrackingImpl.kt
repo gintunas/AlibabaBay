@@ -1,10 +1,5 @@
-package tracking;
+package tracking
 
-public class TrackingImpl implements Tracked {
-    private String location = "Not shipped yet.";
-
-    @Override
-    public String getLocation() {
-        return location;
-    }
+class TrackingImpl : Tracked {
+    override val location = "Not shipped yet."
 }
