@@ -14,6 +14,6 @@ public abstract class Item {
     }
 
     public void addToCart(){
-        System.out.println("Item: " + this.name + " added to cart.");
+        System.out.println("Item " + this.name + " added to cart.");
     }
 }

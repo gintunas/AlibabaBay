@@ -1,29 +1,17 @@
 package items;
 
-import invoicing.InvoiceImpl;
-import invoicing.Invoiced;
-import tracking.Tracked;
-import tracking.TrackingImpl;
-
 import java.math.BigDecimal;
 
-public class HealthCare extends Item implements Invoiced, Tracked {
-    private final InvoiceImpl invoiceImpl = new InvoiceImpl();
-    private final TrackingImpl trackingImpl = new TrackingImpl();
-
+public class HealthCare extends Item {
     public HealthCare(BigDecimal price, String name, String description) {
         super(price, name, description);
     }
 
-    @Override
-    public void printInvoice(Item item) {
-        invoiceImpl.printInvoice(item);
+    public void checkSafetyStandards(){
+        System.out.println("Highest Klass 1");
     }
 
-    @Override
-    public String getLocation() {
-        return trackingImpl.getLocation();
+    public int checkMinimalUsersAge(){
+        return 11;
     }
-
-
 }
