@@ -5,11 +5,11 @@ import tracking.Tracked;
 
 import java.math.BigDecimal;
 
-public class CoolHealthCare extends HealthCare implements Invoiced, Tracked {
+public class HealthCareDeluxe extends HealthCare implements Invoiced, Tracked {
     private final Invoiced invoiceImpl;
     private final Tracked trackingImpl;
 
-    public CoolHealthCare(BigDecimal price, String name, String description, Invoiced invoiceImpl, Tracked trackingImpl) {
+    public HealthCareDeluxe(BigDecimal price, String name, String description, Invoiced invoiceImpl, Tracked trackingImpl) {
         super(price, name, description);
         this.invoiceImpl = invoiceImpl;
         this.trackingImpl = trackingImpl;
