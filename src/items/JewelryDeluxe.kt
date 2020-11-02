@@ -6,7 +6,7 @@ import tracking.Tracked
 import tracking.TrackingImpl
 import java.math.BigDecimal
 
-class CoolJewelry(price: BigDecimal, name: String, description: String, private val returnImpl: ReturnImpl, private val trackingImpl: TrackingImpl)
+class JewelryDeluxe(price: BigDecimal, name: String, description: String, private val returnImpl: ReturnImpl, private val trackingImpl: TrackingImpl)
     : Jewelry(price, name, description),
         Returnable by returnImpl,
         Tracked by trackingImpl
