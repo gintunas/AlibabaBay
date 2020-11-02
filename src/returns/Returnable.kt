@@ -1,5 +1,5 @@
-package returns;
+package returns
 
-public interface Returnable {
-    String returnItem();
+interface Returnable {
+    fun returnItem(): String?
 }

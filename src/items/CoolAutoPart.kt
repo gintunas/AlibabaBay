@@ -1,37 +1,12 @@
-package items;
+package items
 
-import invoicing.Invoiced;
-import returns.Returnable;
-import tracking.Tracked;
+import invoicing.Invoiced
+import returns.Returnable
+import tracking.Tracked
+import java.math.BigDecimal
 
-import java.math.BigDecimal;
-
-public class CoolAutoPart extends AutoPart implements Tracked, Invoiced, Returnable {
-    private final Tracked trackingImpl;
-    private final Invoiced invoiceImpl;
-    private final Returnable returnImpl;
-
-    public CoolAutoPart(BigDecimal price, String name, String description, Tracked trackingImpl, Invoiced invoiceImpl, Returnable returnImpl) {
-        super(price, name, description);
-        this.trackingImpl = trackingImpl;
-        this.invoiceImpl = invoiceImpl;
-        this.returnImpl = returnImpl;
-    }
-
-    @Override
-    public void printInvoice(Item item) {
-        invoiceImpl.printInvoice(item);
-    }
-
-    @Override
-    public String returnItem() {
-        return returnImpl.returnItem();
-    }
-
-    @Override
-    public String getLocation() {
-        return trackingImpl.getLocation();
-    }
-
-
-}
+class CoolAutoPart(price: BigDecimal, name: String, description: String, private val trackingImpl: Tracked, private val invoiceImpl: Invoiced, private val returnImpl: Returnable)
+    : AutoPart(price, name, description),
+        Tracked by trackingImpl,
+        Invoiced by invoiceImpl,
+        Returnable by returnImpl

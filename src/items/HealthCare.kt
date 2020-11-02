@@ -1,17 +1,13 @@
-package items;
+package items
 
-import java.math.BigDecimal;
+import java.math.BigDecimal
 
-public class HealthCare extends Item {
-    public HealthCare(BigDecimal price, String name, String description) {
-        super(price, name, description);
+open class HealthCare(price: BigDecimal, name: String, description: String) : Item(price, name, description) {
+    fun checkSafetyStandards() {
+        println("Highest Klass 1")
     }
 
-    public void checkSafetyStandards(){
-        System.out.println("Highest Klass 1");
-    }
-
-    public int checkMinimalUsersAge(){
-        return 11;
+    fun checkMinimalUsersAge(): Int {
+        return 11
     }
 }

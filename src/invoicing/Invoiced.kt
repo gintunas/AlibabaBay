@@ -1,7 +1,7 @@
-package invoicing;
+package invoicing
 
-import items.Item;
+import items.Item
 
-public interface Invoiced {
-    void printInvoice(Item item);
+interface Invoiced {
+    fun printInvoice(item: Item)
 }

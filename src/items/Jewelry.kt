@@ -1,17 +1,13 @@
-package items;
+package items
 
-import java.math.BigDecimal;
+import java.math.BigDecimal
 
-public class Jewelry extends Item{
-    public Jewelry(BigDecimal price, String name, String description) {
-        super(price, name, description);
+open class Jewelry(price: BigDecimal, name: String, description: String) : Item(price, name, description) {
+    fun printGoldQtInAlloy() {
+        println("1 kg")
     }
 
-    public void printGoldQtInAlloy(){
-        System.out.println("1 kg");
-    }
-
-    public void printWhereGoldIsFrom(){
-        System.out.println("Java Island");
+    fun printWhereGoldIsFrom() {
+        println("Java Island")
     }
 }
